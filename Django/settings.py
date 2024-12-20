@@ -124,6 +124,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # In development, you can use STATICFILES_DIRS to include additional directories if needed
 STATICFILES_DIRS = [
     BASE_DIR / "static",
+    BASE_DIR / "assets",
 ]
 
 # Default primary key field type
