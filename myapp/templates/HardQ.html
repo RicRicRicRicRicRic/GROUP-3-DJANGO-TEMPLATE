@@ -1,13 +1,27 @@
 {% extends "QuizBase.html" %}
 
 {% block header_classes %}
-bg-red-600 text-white
+bg-[#800000] text-white
 {% endblock %}
 
-{% block header_text %}
-Hard Quiz
+{% block header_text %}        Hard Quiz        {% endblock %}
+
+{% block button_style1 %}
+class="w-full p-4 bg-[#800000] text-white rounded-lg hover:bg-[#A24857]"
+{% endblock %}
+{% block button_style2 %}
+class="w-full p-4 bg-[#800000] text-white rounded-lg hover:bg-[#A24857]"
+{% endblock %}
+{% block button_style3 %}
+class="w-full p-4 bg-[#800000] text-white rounded-lg hover:bg-[#A24857]"
+{% endblock %}
+{% block button_style4 %}
+class="w-full p-4 bg-[#800000] text-white rounded-lg hover:bg-[#A24857]"
 {% endblock %}
 
-{% block content %}
+{% block Question_text %}       {{ Easy.Question }}        {% endblock %}
 
-{% endblock %}
+{% block Choice_1 %}       {{ Easy.choice1 }}      {% endblock %}
+{% block Choice_2 %}       {{ Easy.choice2 }}      {% endblock %}
+{% block Choice_3 %}       {{ Easy.choice3 }}      {% endblock %}
+{% block Choice_4 %}       {{ Easy.choice4 }}      {% endblock %}

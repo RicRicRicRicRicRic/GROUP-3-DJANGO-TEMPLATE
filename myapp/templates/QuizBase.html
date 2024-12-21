@@ -9,30 +9,29 @@
 <body class="bg-gray-100 text-gray-900 h-screen flex flex-col">
     <header class="{% block header_classes %}{% endblock %} p-4">
         <h1 class="text-xl font-bold">{% block header_text %}{% endblock %}</h1>
-    </header>    
-    <div class="text-center">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-6">{{ Easy.Question }}</h2>
+    </header>   
+    <main class="flex-grow">
+        <div class="text-center">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">{% block Question_text %}{% endblock %}</h2>
 
-        <style>
-            .btn{
-                @apply w-full p-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600
-            }
-        </style>
-
-        <div class="grid gap-4">
-            <button class="btn">
-                {{ Easy.choice1 }}
-            </button>
-            <button class="btn">
-                {{ Easy.choice2 }}
-            </button>
-            <button class="btn">
-                {{ Easy.choice3 }}
-            </button>
-            <button class="btn">
-                {{ Easy.choice4 }}
-            </button>
+            <div class="grid gap-4">
+                <button {% block button_style1 %}{% endblock %}>
+                    {% block Choice_1 %}{% endblock %}
+                </button>
+                <button {% block button_style2 %}{% endblock %}>
+                    {% block Choice_2 %}{% endblock %}
+                </button>
+                <button {% block button_style3 %}{% endblock %}>
+                    {% block Choice_3 %}{% endblock %}
+                </button>
+                <button {% block button_style4 %}{% endblock %}>
+                    {% block Choice_4 %}{% endblock %}
+                </button>
+            </div>
         </div>
-    </div>
+    </main>
+    <footer class="bg-gray-800 text-white text-center p-4 mt-4">
+        <p>&copy; Group 3 Django Web Quiz</p>
+    </footer>
 </body>
 </html>
