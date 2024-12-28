@@ -4,20 +4,17 @@
 bg-yellow-600 text-white
 {% endblock %}
 
+{% load static %}
+{% block Background_img %}
+style="background-image: url('{% static 'myapp/images/Medium.svg' %}');"
+{% endblock %}
+
 {% block header_text %}        Medium Quiz        {% endblock %}
 
-{% block button_style1 %}
-class="w-full p-4 bg-yellow-500 text-white rounded-lg hover:bg-[#f59e0b]"
-{% endblock %}
-{% block button_style2 %}
-class="w-full p-4 bg-yellow-500 text-white rounded-lg hover:bg-[#f59e0b]"
-{% endblock %}
-{% block button_style3 %}
-class="w-full p-4 bg-yellow-500 text-white rounded-lg hover:bg-[#f59e0b]"
-{% endblock %}
-{% block button_style4 %}
-class="w-full p-4 bg-yellow-500 text-white rounded-lg hover:bg-[#f59e0b]"
-{% endblock %}
+{% block button_color1 %}       bg-yellow-500 hover:bg-[#f59e0b]        {% endblock %}"
+{% block button_color2 %}       bg-yellow-500 hover:bg-[#f59e0b]        {% endblock %}"
+{% block button_color3 %}       bg-yellow-500 hover:bg-[#f59e0b]        {% endblock %}"
+{% block button_color4 %}       bg-yellow-500 hover:bg-[#f59e0b]       {% endblock %}"
 
 {% block Question_text %}      {{ Medium.Question }}        {% endblock %}
 

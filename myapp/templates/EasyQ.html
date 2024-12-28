@@ -1,28 +1,25 @@
 {% extends "QuizBase.html" %}
 
 {% block header_classes %}
-bg-green-600 text-white
+bg-[#14532d] text-white 
+{% endblock %}
+
+{% load static %}
+{% block Background_img %}
+style="background-image: url('{% static 'myapp/images/Easy.svg' %}');"
 {% endblock %}
 
 {% block header_text %}        Easy Quiz        {% endblock %}
 
-{% block button_style1 %}
-class="w-full p-4 bg-green-500 text-white rounded-lg hover:bg-[#a3e635]"
-{% endblock %}
-{% block button_style2 %}
-class="w-full p-4 bg-green-500 text-white rounded-lg hover:bg-[#a3e635]"
-{% endblock %}
-{% block button_style3 %}
-class="w-full p-4 bg-green-500 text-white rounded-lg hover:bg-[#a3e635]"
-{% endblock %}
-{% block button_style4 %}
-class="w-full p-4 bg-green-500 text-white rounded-lg hover:bg-[#a3e635]"
-{% endblock %}
+{% block button_color1 %}       bg-[#166534]  hover:bg-green-500        {% endblock %}"
+{% block button_color2 %}       bg-[#166534]  hover:bg-green-500        {% endblock %}"
+{% block button_color3 %}       bg-[#166534]  hover:bg-green-500        {% endblock %}"
+{% block button_color4 %}       bg-[#166534]  hover:bg-green-500        {% endblock %}"
 
 {% block Question_text %}       {{ Easy.Question }}        {% endblock %}
 
-{% block Choice_1 %}       {{ Easy.choice1 }}      {% endblock %}
-{% block Choice_2 %}       {{ Easy.choice2 }}      {% endblock %}
-{% block Choice_3 %}       {{ Easy.choice3 }}      {% endblock %}
-{% block Choice_4 %}       {{ Easy.choice4 }}      {% endblock %}
+{% block Choice_1 %}       {{ Easy.choice1 }}     {% endblock %}
+{% block Choice_2 %}       {{ Easy.choice2 }}     {% endblock %}
+{% block Choice_3 %}       {{ Easy.choice3 }}    {% endblock %}
+{% block Choice_4 %}       {{ Easy.choice4 }}   {% endblock %}
 

@@ -4,20 +4,17 @@
 bg-[#800000] text-white
 {% endblock %}
 
+{% load static %}
+{% block Background_img %}
+style="background-image: url('{% static 'myapp/images/Hard.svg' %}');"
+{% endblock %}
+
 {% block header_text %}        Hard Quiz        {% endblock %}
 
-{% block button_style1 %}
-class="w-full p-4 bg-[#800000] text-white rounded-lg hover:bg-[#A24857]"
-{% endblock %}
-{% block button_style2 %}
-class="w-full p-4 bg-[#800000] text-white rounded-lg hover:bg-[#A24857]"
-{% endblock %}
-{% block button_style3 %}
-class="w-full p-4 bg-[#800000] text-white rounded-lg hover:bg-[#A24857]"
-{% endblock %}
-{% block button_style4 %}
-class="w-full p-4 bg-[#800000] text-white rounded-lg hover:bg-[#A24857]"
-{% endblock %}
+{% block button_color1 %}       bg-[#800000] hover:bg-[#A24857]        {% endblock %}"
+{% block button_color2 %}       bg-[#800000] hover:bg-[#A24857]        {% endblock %}"
+{% block button_color3 %}       bg-[#800000] hover:bg-[#A24857]        {% endblock %}"
+{% block button_color4 %}       bg-[#800000] hover:bg-[#A24857]        {% endblock %}"
 
 {% block Question_text %}       {{ Easy.Question }}        {% endblock %}
 

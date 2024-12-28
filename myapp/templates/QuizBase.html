@@ -10,27 +10,40 @@
     <header class="{% block header_classes %}{% endblock %} p-4">
         <h1 class="text-xl font-bold">{% block header_text %}{% endblock %}</h1>
     </header>   
-    <main class="flex-grow">
-        <div class="text-center">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-6">{% block Question_text %}{% endblock %}</h2>
 
-            <div class="grid gap-4">
-                <button {% block button_style1 %}{% endblock %}>
-                    {% block Choice_1 %}{% endblock %}
-                </button>
-                <button {% block button_style2 %}{% endblock %}>
-                    {% block Choice_2 %}{% endblock %}
-                </button>
-                <button {% block button_style3 %}{% endblock %}>
-                    {% block Choice_3 %}{% endblock %}
-                </button>
-                <button {% block button_style4 %}{% endblock %}>
-                    {% block Choice_4 %}{% endblock %}
-                </button>
+    <main class="grow flex items-center justify-center bg-cover bg-center" {% block Background_img %}{% endblock %}>
+        <div class="text-center h-[85%] w-[70%] mx-auto border-2 border-blue-500 rounded-lg">
+            <div class="border-2 border-blue-500 h-[20%] flex items-center justify-center">
+                <h2 class="text-2xl font-semibold text-gray-800">{% block Question_text %}{% endblock %}</h2>
+            </div>
+            <div class="flex items-center justify-center border-2 border-blue-500 h-[80%]">
+                <div class="w-[50%] h-[60%] grid gap-4 border-2 border-blue-500">
+                    <button class="p-3 text-white rounded-lg flex justify-center items-center {% block button_color1 %}{% endblock %}">
+                        <span class="text-left">
+                            <p>A.){% block Choice_1 %}{% endblock %}</p>
+                        </span>
+                    </button>
+                    <button class="p-3 text-white rounded-lg flex justify-center items-center  {% block button_color2 %}{% endblock %}">
+                        <span class="text-left">
+                            <p>B.){% block Choice_2 %}{% endblock %}</p>
+                        </span>
+                    </button>
+                    <button class="p-3 text-white rounded-lg flex justify-center items-center {% block button_color3 %}{% endblock %}">
+                        <span class="text-left">
+                            <p>C.){% block Choice_3 %}{% endblock %}</p>
+                        </span>
+                    </button>
+                    <button class="p-3 text-white rounded-lg flex justify-center items-center  {% block button_color4 %}{% endblock %}">
+                        <span class="text-left">
+                            <p>D.){% block Choice_4 %}{% endblock %}</p>
+                        </span>
+                    </button>            
+                </div>
             </div>
         </div>
     </main>
-    <footer class="bg-gray-800 text-white text-center p-4 mt-4">
+    
+    <footer class="bg-gray-800 text-white text-center p-4 ">
         <p>&copy; Group 3 Django Web Quiz</p>
     </footer>
 </body>
